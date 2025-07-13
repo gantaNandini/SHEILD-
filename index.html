@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHEILD – Smart Safety Platform</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+</head>
+<body>
+
+  <header>
+    <h1>SHEILD</h1>
+    <p>Smart Hybrid Emergency Intelligence & Location Defense</p>
+  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">SHEILD</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <h2>Predict. Protect. Prove.</h2>
+      <p>Your AI-powered Guardian for Women’s Safety</p>
+      <button id="startBtn">Start</button>
+    </section>
+
+    <section class="safety-screen hidden" id="safetyScreen">
+      <h2>Safety Route Selection</h2>
+      <select id="routeSelect">
+        <option value="route1">Route A</option>
+        <option value="route2">Route B</option>
+        <option value="route3">Route C</option>
+      </select>
+      <p id="safetyScore">Safety Score: --</p>
+      <div id="map" style="height: 300px; margin-top: 20px;"></div>
+      <button id="monitorBtn">Start Monitoring</button>
+    </section>
+
+ <section class="monitoring-screen hidden" id="monitorScreen">
+  <h2>Live Monitoring</h2>
+  <p id="monitorStatus">Status: Idle</p>
+  <button id="startMicBtn">Start Microphone Monitoring</button>
+  <button id="simulateBtn">Simulate Aggression Event</button>
+</section>
+
+<section class="incident-screen hidden" id="incidentScreen">
+  <h2>Incident Detected</h2>
+  <p>Alert sent to trusted guardians.</p>
+  <p>Evidence locked to blockchain.</p>
+  <p id="timestamp"></p>
+  
+  <div id="guardianList" class="guardian-list"></div>
+
+  <button id="logBtn">View Evidence Log</button>
+</section>
+
+  
+
+    <section class="log-screen hidden" id="logScreen">
+      <h2>Evidence Log</h2>
+      <div id="logList" class="log-blocks"></div>
+
+      </ul>
+      <button id="backBtn">Back to Start</button>
+    </section>
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>SHEILD (Smart Hybrid Emergency Intelligence & Location Defense) is an AI-powered safety platform that predicts threats, monitors live environments, and securely locks evidence on blockchain to protect women anytime, anywhere.</p>
+    </section>
+
+  
+    
+  </main>
+  <audio id="alertSound" src="https://www.soundjay.com/button/sounds/beep-07.mp3" preload="auto"></audio>
+
+
+  <footer>
+    <p>&copy; 2025 SHEILD. All rights reserved.</p>
+  </footer>
+
+  <!-- Load Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
+  <!-- Your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
